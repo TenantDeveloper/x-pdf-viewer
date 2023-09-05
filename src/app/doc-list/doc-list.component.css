@@ -1,0 +1,22 @@
+ul {
+    list-style: none;
+    background-color: #fafafa;
+    width: 20%;
+}
+li {
+    padding: 12px 5px;
+    cursor: pointer;
+}
+ 
+
+li:hover , li.active {
+    background-color: burlywood;
+}
+
+.pdf-container {
+    display: flex;
+}
+.pdf-viewer {
+    width: 80%;
+    margin-left: 10px;
+}

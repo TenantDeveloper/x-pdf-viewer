@@ -1,0 +1,14 @@
+<div class="pdf-container">
+    <ul *ngIf="documents | async as docs">
+        <li *ngFor="let item of docs"
+        [class.active]="item.id == currentPDF?.id"
+        (click)="displayPDF(item)"> 
+             <strong> {{item.title}} </strong>    
+        </li>
+    </ul>
+
+    <div class="pdf-viewer" *ngIf="currentPDF">
+        <h3> {{currentPDF.id}}:-{{" "}} {{currentPDF.title}} </h3>
+      <app-x-pdf-viewer [pdfUrl]="currentPDF.url"></app-x-pdf-viewer>
+    </div>
+</div>

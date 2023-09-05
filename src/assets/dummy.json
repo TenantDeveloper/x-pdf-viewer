@@ -1,0 +1,17 @@
+[
+    {
+        "id":1,
+        "title":"Sample Pdf 1",
+        "url": "https://www.africau.edu/images/default/sample.pdf"
+    },
+    {
+        "id":2,
+        "title":"Dummy pdf file",
+        "url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+    },
+    {
+        "id":3,
+        "title":"Yukon edu.",
+        "url": "https://www.orimi.com/pdf-test.pdf"
+    }
+]

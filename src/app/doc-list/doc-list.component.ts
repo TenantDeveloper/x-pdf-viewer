@@ -29,7 +29,10 @@ export class DocListComponent {
 
 
   public displayPDF(item: IDocument): void {
+    this.currentPDF = null;
+    setTimeout(() => {
     this.currentPDF = item;
+    }, 100);
   }
 
 

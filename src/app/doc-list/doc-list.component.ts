@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from  '@angular/common/http';
-import { Observable, map, share, startWith } from 'rxjs';
+import { Observable, map, share, startWith, tap } from 'rxjs';
 import { IDocument } from '../models/document.model';
 
 @Component({
@@ -14,6 +14,11 @@ export class DocListComponent {
   
   public readonly documents: Observable<IDocument[]> = this.http.get(this._jsonURL)
   .pipe(
+    tap(x => {
+      if(Array.isArray(x)) {
+        this.currentPDF = x[0];
+      }
+    }),
     map(x => x as Array<IDocument>),
     startWith([]),
     share());

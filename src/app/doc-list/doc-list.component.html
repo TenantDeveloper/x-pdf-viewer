@@ -9,6 +9,6 @@
 
     <div class="pdf-viewer" *ngIf="currentPDF">
         <h3> {{currentPDF.id}}:-{{" "}} {{currentPDF.title}} </h3>
-      <app-x-pdf-viewer [pdfUrl]="currentPDF.url"></app-x-pdf-viewer>
+        <app-x-expended-pdf-viewer [pdfSrc]="currentPDF.base64" > </app-x-expended-pdf-viewer>
     </div>
 </div>

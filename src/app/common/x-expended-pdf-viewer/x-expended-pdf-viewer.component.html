@@ -1,0 +1,35 @@
+<ng-container *ngIf="isBase64 && src">
+    <ngx-extended-pdf-viewer
+[base64Src]="src"
+backgroundColor="#ffffff"
+[height]="'90vh'"
+[useBrowserLocale]="true"
+[handTool]="false"
+[showHandToolButton]="true"
+[theme]="theme"
+(afterPrint)="afterPrintEmitter()"
+(beforePrint)="beforePrintEmitter()"
+[filenameForDownload]="fileName"
+[language]="lang"
+>
+</ngx-extended-pdf-viewer>
+</ng-container>
+
+
+<ng-container *ngIf="!isBase64 && src">
+    <ngx-extended-pdf-viewer
+    [(src)]="src"
+backgroundColor="#ffffff"
+[height]="'90vh'"
+[useBrowserLocale]="true"
+[handTool]="false"
+[showHandToolButton]="true"
+[theme]="theme"
+(afterPrint)="afterPrintEmitter()"
+(beforePrint)="beforePrintEmitter()"
+[filenameForDownload]="fileName"
+[language]="lang"
+
+>
+</ngx-extended-pdf-viewer>
+</ng-container>
